@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 
           if (option.isPath){
             var file = grunt.file.expand(f).toString();
- +          var relativeTo = path.dirname(file);
+            var relativeTo = path.dirname(file);
             vals = vals.map(function(val){
               return path.join(relativeTo,val);
             });
